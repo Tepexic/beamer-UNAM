@@ -1,0 +1,187 @@
+% DO NOT COMPILE THIS FILE DIRECTLY!
+% This is included by main.tex
+
+\begin{frame}[plain,t] % the tile page must always be set in a plain frame
+\maketitle
+\end{frame}
+
+
+\begin{frame}{Table of contents}
+    \tableofcontents
+\end{frame}
+  
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of contents áéíóúñü}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%=============================================================
+% What's this?
+%=============================================================
+\section{What's this?}
+\begin{frame}{What is this?}{\LaTeX Beamer Theme}
+    \begin{itemize}
+    \item The main prupose of this theme is to provide a nice theme for Beamer, in the case you don't want to use the default ones.
+    \item The name comes from the National Autonomous University of Mexico (UNAM)
+    \item Other themes are named after locations of Universities or conferences
+    \end{itemize}
+\end{frame}
+
+
+
+%=============================================================
+% Theme usage
+%=============================================================
+\subsection{Theme usage}
+
+\begin{frame}[fragile]{How to use the theme}
+\begin{itemize}
+\item Install Beamer
+\item Read the Beamer documentation
+  \begin{itemize}
+  \item \href{http://ctan.mirrors.hoobly.com/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{Beamer doc on CTAN}
+  \item \href{http://web.mit.edu/rsi/www/pdfs/beamer-tutorial.pdf}{Quick start}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+%=============================================================
+% Theme config
+%=============================================================
+\begin{frame}[t,fragile]{Configuring the theme}
+\begin{itemize}
+\item Beamer themes can be configured with options between \verb![! and
+      \verb!]!
+  \begin{itemize}
+  \item \verb!\usetheme[options=values]{unam}!
+  \end{itemize}
+\item If you do not specify any option, you get
+  \begin{itemize}
+  \item Simple title page
+  \item Watermark theme
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+%=============================================================
+% Theme options
+%=============================================================
+\begin{frame}[allowframebreaks,fragile]{Theme options}
+\begin{itemize}
+\item \verb! titlepagelogo = route/file.ext!
+    \begin{itemize}
+        \item Provides the crest for the fancy title page.
+        \item The default file is \verb!unamlogo.pdf/eps!.
+    \end{itemize}
+\item \verb!fancytitlepage = true/false!
+    \begin{itemize}
+    \item \verb!fancytitlepage = true! provides a fancy title page
+    \item \verb!fancytitlepage = false! provides a plain title page
+    \end{itemize}
+\item \verb!sidebartheme = true/false!
+\begin{itemize}
+    \item \verb!sidebartheme = true! provides a sidebar theme, no watermark
+    \item \verb!sidebartheme = false! provides a watermark theme, with navigation on the header
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\subsection{Theme features}
+%=============================================================
+% Alternative title page
+%=============================================================
+\begin{frame}[t,fragile]{Fancy title page}
+\begin{itemize}
+\item A fancy title page can be enabled with the \verb!fancytitlepage = true! option
+\item You can put a logo in the title page, just pass the file name using the
+      \verb! titlepagelogo = route/file.ext! option.
+\item Remember to use a \textbf{plain} and \textbf{top-aligned} frame when using fancy title
+      pages:\\
+      \vskip1ex
+      \verb!\begin{frame}[t,plain]!\\
+      \verb!\titlepage!\\
+      \verb!\end{frame}!
+\end{itemize}
+\end{frame}
+
+
+%=============================================================
+%  sidebar theme
+%=============================================================
+
+\begin{frame}[t,fragile]{Sidebar theme}
+    \begin{itemize}
+        \item \verb!sidebartheme = true!
+        \item This theme has the crest on the left sidebar, and also includes navigation.
+        \item Institute, date, author and pages are on the footer.
+        \item When this option is set to \verb!false!, a watermark theme is used.
+    \end{itemize}
+\end{frame}
+
+
+%=============================================================
+%  Dummy text
+%=============================================================
+\section{Dummy section}
+\subsection{Dummy subsection}
+\begin{frame}{Frame Title}
+\begin{theorem}
+There is no largest prime number.
+\end{theorem}
+\end{frame}
+
+\begin{frame}{Frame Title}
+\begin{proof}
+\begin{enumerate}
+\item<1-| alert@1> Suppose $p$ were the largest prime number.
+\item<2-> Let $q$ be the product of the first $p$ numbers.
+\item<3-> Then $q+1$ is not divisible by any of them.
+\item<4-> But $q + 1$ is greater than $1$, thus divisible by some prime
+number not in the first $p$ numbers.\qedhere
+\end{enumerate}
+\end{proof}
+\end{frame}
+
+
+\begin{frame}{Frame Title}
+\blinddescription
+\end{frame}
+
+\subsection{Dummy subsection}
+\begin{frame}[allowframebreaks]{Frame Title}
+\blindmathpaper
+\end{frame}
+
+\subsubsection{Dummy subsubsection}
+\begin{frame}{Frame Title}
+\blindlist{itemize}[4]
+\end{frame}
+
+\begin{frame}{Frame Title}
+\blinddescription
+\end{frame}
+
+\section{Dummy section}
+\subsection{Dummy subsection}
+\begin{frame}{Frame Title}
+\blindenumerate
+\end{frame}
+
+\begin{frame}{Frame Title}
+\blindlist{itemize}[4]
+\end{frame}
+
+\begin{frame}{Frame Title}
+\blinddescription
+\end{frame}
+
+\subsection{Dummy subsection}
+\begin{frame}[allowframebreaks]{Frame Title}
+\blindmathpaper
+\end{frame}
